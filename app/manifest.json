@@ -5,7 +5,7 @@
   "description": "__MSG_appDescription__",
   "icons": {
     "16": "images/icon-16.png",
-    "128": "images/icon-128.png"
+    "128": "images/case-128.png"
   },
   "default_locale": "en",
   "background": {
@@ -14,6 +14,9 @@
       "scripts/background.js"
     ]
   },
+  "web_accessible_resources": [
+    "images/*"
+  ],
   "browser_action": {
     "default_icon": {
       "19": "images/icon-19.png",
@@ -28,6 +31,7 @@
       ],
       "js": [
         "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/ractive/ractive.min.js",
         "bower_components/parse/parse.min.js",
         "scripts/contentscript.js"
       ],

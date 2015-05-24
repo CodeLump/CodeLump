@@ -117,6 +117,7 @@
     z-index:auto;
   }
 /********* END RESET **********/
+$themeColorOne: #FACF58;
 
 .CodeLumpHolder {
   display: block;
@@ -131,33 +132,39 @@
     padding: 0;
     padding-left: 15px;
     padding-right: 10px;
-    background-color: #FACF58;
+    background-color: $themeColorOne;
     position: relative;
     color: black;
     li{
-      &:first-child .actionBtn{
-        margin-top: 5px;
+      &:first-child{
+        padding-top: 5px;
       }
-      width: 48px;
       display: block;
-      margin-bottom: 5px;
-      .actionBtn {
-        border-radius: 24px;
-        width: 48px;
-        background-color: rgba(255, 255, 255, .3);
-        &:hover{
-          background-color: rgba(255, 255, 255, .15);
-        }
-        &:active{
-          box-shadow: inset 1px 1px 5px -1px rgba(0,0,0,0.75);
-        }
-        height: 48px;
-        text-decoration: none;
-      }
+      width: 48px;
+      height: 56px;
+      padding-bottom: 5px;
+      text-align: left;
       span{
-        display: block;
-        width: 100%;
         text-align: center;
+        display: block;
+        padding-bottom: 10px;
+      }
+      .actionBtn {
+        text-align: center;
+        background-color: rgba(255,255,255, .4);
+        width: 100%;
+        height: 100%;
+        img{
+          width: 32px;
+        }
+        text-decoration: none;
+        &:hover{
+        }
+        &:not([disabled]){
+          &:active{
+            box-shadow: inset 1px 1px 5px -1px rgba(0,0,0,0.75);
+          }
+        }
       }
     }
   }
