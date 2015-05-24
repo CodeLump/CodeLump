@@ -1,6 +1,6 @@
 {
   "name": "CodeLump",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -41,5 +41,9 @@
       "run_at": "document_end",
       "all_frames": false
     }
+  ],
+  "permissions": [
+    "cookies",
+    "*://codelump.parseapp.com/*"
   ]
 }

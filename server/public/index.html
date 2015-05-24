@@ -1,7 +1,7 @@
 
 <html>
   <head>
-    <title>My ParseApp site</title>
+    <title>Login</title>
     <style>
     body { font-family: Helvetica, Arial, sans-serif; }
     div { width: 800px; height: 400px; margin: 40px auto; padding: 20px; border: 2px solid #5298fc; }
@@ -10,12 +10,133 @@
     em { font-family: monospace; }
     a { color: #5298fc; text-decoration: none; }
     </style>
+    <style>
+      form{
+        padding-top: 80px;
+      }
+      .switch{
+        padding: 20px;
+      }
+    </style>
   </head>
   <body>
-    <div>
-      <h1>Congratulations! You're already hosting with Parse.</h1>
-      <p>To get started, edit this file at <em>public/index.html</em> and start adding static content.</p>
-      <p>If you want something a bit more dynamic, delete this file and check out <a href="https://parse.com/docs/hosting_guide#webapp">our hosting docs</a>.</p>
-    </div>
+
+
+  Login or register for CodeLump
+  <br/>
+  <button class="switch">Switch Log In/Register</button>
+
+  <form id="register" action="">
+    <h3>Register</h3>
+    <label for="email">Email:</label>
+    <input type="email" id="email"/>
+    <br/>
+    <label for="user">Username: </label>
+    <input type="text" id="user"/>
+    <br/>
+    <label for="pass">Password: </label>
+    <input type="password" id="pass"/>
+    <br/>
+    <button type="submit" class="register">Register</button>
+  </form>
+  
+  <form id="login" action="">
+    <h3>Login</h3>
+    <label for="userLogin">Username: </label>
+    <input type="text" id="userLogin"/>
+    <br/>
+    <label for="passLogin">Password: </label>
+    <input type="password" id="passLogin"/>
+    <br/>
+    <button type="submit" class="login">Login</button>
+  </form>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="//parse.com/downloads/javascript/parse/latest/min.js"></script>
+  <script src="js.cookie.js"></script>
+  <script>
+
+    Parse.initialize('QoVOsIEyAMZ7g5wF1RSCblOIY7VieBl4O5DFmLT4', 'SbF6YcSmy3ykFEUh9ANXMOLUOSdGg9w5E1J0mLCX');
+    if (Parse.User.current()) {
+      Parse.User.logOut();
+    }
+
+    //jq shake plugin
+    (function ($) {
+      $.fn.shake = function (options) {
+        // defaults
+        var settings = {
+          'shakes': 2,
+          'distance': 10,
+          'duration': 400
+        };
+        // merge options
+        if (options) {
+          $.extend(settings, options);
+        }
+        // make it so
+        var pos;
+        return this.each(function () {
+          $this = $(this);
+          // position if necessary
+          pos = $this.css('position');
+          if (!pos || pos === 'static') {
+            $this.css('position', 'relative');
+          }
+          // shake it
+          for (var x = 1; x <= settings.shakes; x++) {
+            $this.animate({ left: settings.distance * -1 }, (settings.duration / settings.shakes) / 4)
+              .animate({ left: settings.distance }, (settings.duration / settings.shakes) / 2)
+              .animate({ left: 0 }, (settings.duration / settings.shakes) / 4);
+          }
+        });
+      };
+    }(jQuery));
+
+
+    $('#login').hide();
+    $('.switch').click(function() {
+      Parse.User.logOut();
+      $('#register').toggle();
+      $('#login').toggle();
+    });
+    $('#login').submit(function(e) {
+      $pass =  $('#passLogin').val();
+      Parse.User.logIn($('#userLogin').val(),$pass, {
+        success: function(user){
+          setCookies(user.get("username"), $pass);
+          alert('Logged in! Redirecting...');
+          location.href=decodeURI(location.hash.substr(1));
+        }, error: function(user, error){
+          $('#login').shake();
+          throw(JSON.stringify(error));
+        }
+      });
+      e.preventDefault();
+      return false;
+    });
+    $('#register').submit(function(e) {
+      var user = new Parse.User();
+      $pass =  $('#pass').val();
+      user.set("username", $('#user').val());
+      user.set("password", $pass);
+      user.set("email", $('#email').val());
+      user.signUp(null, {
+        success: function(user){
+          setCookies(user.get("username"),  $pass);
+          alert('Logged in! Redirecting...');
+          location.href=decodeURI(location.hash.substr(1));
+        }, error: function(user, error){
+          $('#register').shake();
+          throw(JSON.stringify(error));
+        }
+      });
+      e.preventDefault();
+      return false;
+    });
+    function setCookies(user, pass){
+      $.cookie('user', user, { expires: 365 });
+      $.cookie('pass', pass, { expires: 365 });
+    }
+  </script>
   </body>
 </html>

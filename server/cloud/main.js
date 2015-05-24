@@ -1,7 +1,22 @@
 var ProxMine = Parse.Object.extend('ProxMine');
+//here's some free shit for you!
+Parse.Cloud.beforeSave("User", function(request, response) {
+  if (!request.object.get("proxMines")) {
+    request.object.set("proxMines", 5);
+  }
+  if (!request.object.get("cases")) {
+    request.object.set("cases", 5);
+  }
+  if (!request.object.get("docs")) {
+    request.object.set("docs", 5);
+  }
+
+  response.success();
+});
 Parse.Cloud.define("hello", function(request, response) {
   response.success("CodeLump says, \"Stop poking around!\"");
 });
+//place a mine if you're feeling naughty!
 Parse.Cloud.define("placeMine", function(request, response) {
   Parse.Cloud.useMasterKey();
   var url = request.params.url;
