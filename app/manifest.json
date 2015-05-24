@@ -19,16 +19,16 @@
       "19": "images/icon-19.png",
       "38": "images/icon-38.png"
     },
-    "default_title": "CodeLump",
-    "default_popup": "popup.html"
+    "default_title": "CodeLump"
   },
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "<all_urls>"
       ],
       "js": [
+        "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/parse/parse.min.js",
         "scripts/contentscript.js"
       ],
       "run_at": "document_end",
