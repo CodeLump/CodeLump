@@ -1,0 +1,57 @@
+
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body { font-family: Helvetica, Arial, sans-serif; }
+    div { width: 800px; height: 400px; margin: 40px auto; padding: 20px; border: 2px solid #5298fc; }
+    h1 { font-size: 30px; margin: 0; }
+    p { margin: 40px 0; }
+    em { font-family: monospace; }
+    a { color: #5298fc; text-decoration: none; }
+  </style>
+  <style>
+    form{
+      padding-top: 80px;
+    }
+    .switch{
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+Login or register for CodeLump
+<br/>
+<button class="switch">Switch Log In/Register</button>
+
+<form id="register" action="">
+  <h3>Register</h3>
+  <label for="email">Email:</label>
+  <input type="email" id="email"/>
+  <br/>
+  <label for="user">Username: </label>
+  <input type="text" id="user"/>
+  <br/>
+  <label for="pass">Password: </label>
+  <input type="password" id="pass"/>
+  <br/>
+  <button type="submit" class="register">Register</button>
+</form>
+
+<form id="login" action="">
+  <h3>Login</h3>
+  <label for="userLogin">Username: </label>
+  <input type="text" id="userLogin"/>
+  <br/>
+  <label for="passLogin">Password: </label>
+  <input type="password" id="passLogin"/>
+  <br/>
+  <button type="submit" class="login">Login</button>
+</form>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/parse/parse.min.js"></script>
+<script src="scripts/options.js"></script>
+</body>
+</html>

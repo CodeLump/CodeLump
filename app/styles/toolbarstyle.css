@@ -150,13 +150,17 @@
 .CodeLumpHolder .CodeLumpToolBar li:first-child {
   padding-top: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003147}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003145}}
+.CodeLumpHolder .CodeLumpToolBar li.short {
+  height: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003150}}
 .CodeLumpHolder .CodeLumpToolBar li span {
   text-align: center;
   display: block;
   padding-bottom: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003152}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003155}}
 .CodeLumpHolder .CodeLumpToolBar li .actionBtn {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.4);
@@ -164,11 +168,11 @@
   height: 100%;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003157}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003160}}
 .CodeLumpHolder .CodeLumpToolBar li .actionBtn img {
   width: 32px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003167}}
 .CodeLumpHolder .CodeLumpToolBar li .actionBtn:not([disabled]):active {
   box-shadow: inset 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
 }
