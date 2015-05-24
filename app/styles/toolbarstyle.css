@@ -1,0 +1,172 @@
+/******** BEGIN RESET *********/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\000033}}
+.CodeLumpHolder,
+.CodeLumpHolder * {
+  animation: none;
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-duration: 0;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+  animation-name: none;
+  animation-play-state: running;
+  animation-timing-function: ease;
+  backface-visibility: visible;
+  background: 0 0;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-position-x: 0;
+  background-position-y: 0;
+  background: 0 0/auto auto;
+  border: 0;
+  border-style: none;
+  border-width: medium;
+  border-color: inherit;
+  border-bottom: 0;
+  border-collapse: separate;
+  border-image: none;
+  border-left: 0;
+  border-radius: 0;
+  border-right: 0;
+  border-spacing: 0;
+  border-top: 0;
+  bottom: auto;
+  box-shadow: none;
+  box-sizing: content-box;
+  caption-side: top;
+  clear: none;
+  clip: auto;
+  color: inherit;
+  columns: auto;
+  column-count: auto;
+  column-fill: balance;
+  column-gap: normal;
+  column-rule: medium none currentColor;
+  column-rule-color: currentColor;
+  column-rule-style: none;
+  column-rule-width: none;
+  column-span: 1;
+  column-width: auto;
+  content: normal;
+  counter-increment: none;
+  counter-reset: none;
+  cursor: auto;
+  direction: ltr;
+  display: inline;
+  empty-cells: show;
+  float: none;
+  font: 400;
+  font-family: inherit;
+  font-size: medium;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  height: auto;
+  hyphens: none;
+  left: auto;
+  letter-spacing: normal;
+  line-height: normal;
+  list-style: disc;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  min-height: 0;
+  min-width: 0;
+  opacity: 1;
+  orphans: 0;
+  outline: 0;
+  outline: 0;
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0;
+  page-break-after: auto;
+  page-break-before: auto;
+  page-break-inside: auto;
+  perspective: none;
+  perspective-origin: 50% 50%;
+  position: auto;
+  quotes: '\201C' '\201D' '\2018' '\2019';
+  right: 0;
+  tab-size: 8;
+  table-layout: auto;
+  text-align: inherit;
+  text-align-last: auto;
+  text-decoration: none;
+  text-decoration-color: inherit;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  top: auto;
+  transform: none;
+  transform-style: flat;
+  transition: none;
+  transition-delay: 0s;
+  transition-duration: 0s;
+  transition-property: none;
+  transition-timing-function: ease;
+  unicode-bidi: normal;
+  vertical-align: baseline;
+  visibility: visible;
+  white-space: normal;
+  widows: 0;
+  width: auto;
+  word-spacing: normal;
+  z-index: auto;
+}
+
+/********* END RESET **********/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003121}}
+.CodeLumpHolder {
+  display: block;
+  z-index: 99999999;
+  position: fixed;
+  right: 0;
+  top: 30%;
+  width: 73px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003128}}
+.CodeLumpHolder .CodeLumpToolBar {
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  padding-left: 15px;
+  padding-right: 10px;
+  background-color: #FACF58;
+  position: relative;
+  color: black;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003137}}
+.CodeLumpHolder .CodeLumpToolBar li {
+  width: 48px;
+  display: block;
+  margin-bottom: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003138}}
+.CodeLumpHolder .CodeLumpToolBar li:first-child .actionBtn {
+  margin-top: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003144}}
+.CodeLumpHolder .CodeLumpToolBar li .actionBtn {
+  border-radius: 24px;
+  width: 48px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 48px;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003148}}
+.CodeLumpHolder .CodeLumpToolBar li .actionBtn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003151}}
+.CodeLumpHolder .CodeLumpToolBar li .actionBtn:active {
+  box-shadow: inset 1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Ethan\/Documents\/Code\/CodeLump\/app\/styles\/toolbarstyle\.scss}line{font-family:\00003157}}
+.CodeLumpHolder .CodeLumpToolBar li span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}

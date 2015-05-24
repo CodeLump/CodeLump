@@ -16,10 +16,12 @@
   "undef": true,
   "unused": true,
   "strict": true,
+  "jquery": true,
   "trailing": true,
   "smarttabs": true,
   "globals" : {
     "chrome": true,
-    "crypto": true
+    "crypto": true,
+    "Parse": false
   }
 }

@@ -31,6 +31,9 @@
         "bower_components/parse/parse.min.js",
         "scripts/contentscript.js"
       ],
+      "css": [
+        "styles/toolbarstyle.css"
+      ],
       "run_at": "document_end",
       "all_frames": false
     }
