@@ -2,7 +2,7 @@
 Parse.initialize('QoVOsIEyAMZ7g5wF1RSCblOIY7VieBl4O5DFmLT4', 'SbF6YcSmy3ykFEUh9ANXMOLUOSdGg9w5E1J0mLCX');
 
 chrome.runtime.onInstalled.addListener(function (details) {
-  console.log('previousVersion', details.previousVersion);
+  //chrome.runtime.openOptionsPage();
 });
 
 chrome.browserAction.setBadgeText({text: '\'Allo'});
@@ -22,7 +22,7 @@ methods.getUser = function(request, sender, respond) {
    // console.log(config);
     if (!config) respond('err: no configured user');
     else if (!Parse.User.current()){
-      Parse.logIn(config.CLUser, config.CLPass).then(function(user) {
+      Parse.User.logIn(config.CLUser, config.CLPass).then(function(user) {
         respond(user);
       }, function (err){
         respond(err);
@@ -46,4 +46,35 @@ methods.placeMine = function(request, sender, respond){
   }, function(error){
     respond(error);
   });
-}
+};
+methods.placeCase = function(request, sender, respond){
+  console.log('placing a case at '+request.url);
+  Parse.Cloud.run('placeCase', {url: request.url}).then(function(result) {
+    console.log(result.newcase);
+    respond(result);
+  }, function(error){
+    respond(error);
+  });
+};
+methods.placeDocs = function(request, sender, respond){
+  console.log('placing a document at '+request.url+' to '+request.toUrl);
+  Parse.Cloud.run('placeDocs', {url: request.url, toUrl: request.toUrl, msg: request.msg}).then(function(result) {
+    console.log(JSON.parse(result).newcase);
+    respond(result);
+  }, function(error){
+    respond(error);
+  });
+};
+methods.checkPage = function(request, sender, respond){
+  console.log('Checking page '+request.url);
+  Parse.Cloud.run('checkPage', {url: request.url}).then(function(result) {
+    console.log(result);
+    respond(result);
+  }, function(error){
+    respond(error);
+  });
+};
+methods.openOptions = function(request, sender, respond){
+  chrome.runtime.openOptionsPage();
+  respond(true);
+};

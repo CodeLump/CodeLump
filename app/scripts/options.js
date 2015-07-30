@@ -45,7 +45,7 @@ $('#login').submit(function(e) {
     success: function(user){
       setCookies(user.get("username"), $pass);
       alert('Logged in!');
-      Parse.logOut();
+      Parse.User.logOut();
       //location.href=decodeURI(location.hash.substr(1));
     }, error: function(user, error){
       $('#login').shake();

@@ -1,11 +1,11 @@
 {
   "name": "CodeLump",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
     "16": "images/Suitcase-16.png",
-    "128": "images/case-128.png"
+    "128": "images/Suitcase-128.png"
   },
   "default_locale": "en",
   "background": {
